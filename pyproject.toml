@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "clms-status-cdse-sh"
+version = "0.1.0"
+description = "CLMS collections status in CDSE Sentinel Hub"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "python-dotenv>=1.2.3",
+    "requests>=2.31.0",
+]
+
+[tool.setuptools]
+py-modules = ["main"]
+packages = ["src"]
+
+[tool.pylint."messages control"]
+disable = ["logging-fstring-interpolation", "line-too-long"]
+
+[tool.ruff]
+ignore = ["DTZ001", "DTZ005"]

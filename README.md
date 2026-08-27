@@ -76,7 +76,7 @@ python main.py -l debug
 The tool automatically creates `CLMS_SH_collection_status.csv` with the following columns:
 - **BYOC ID**: Collection identifier with `byoc-` prefix
 - **Name**: Human-readable collection name
-- **Available**: "Yes" if found in CDSE, "No" if not
+- **Available**: "True" if found in CDSE, "False" if not
 - **Last Updated**: ISO timestamp when the file was generated
 
 Example:

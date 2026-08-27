@@ -1,4 +1,4 @@
-# CLMS Collections Status in CDSE
+# CLMS Collections Status in CDSE Sentinel Hub
 
 Extract BYOC collection IDs from EU-CDSE documentation and verify their availability in Sentinel Hub. Generates report in CSV format.
 
@@ -12,14 +12,14 @@ Extract BYOC collection IDs from EU-CDSE documentation and verify their availabi
 
 ### Prerequisites
 - **Python** >= 3.12
-- **requests** >= 2.31.0
 - CDSE SH Auth credentials
 
 ### Installation
 
+**Using pip:**
 ```bash
 # Clone or navigate to the project directory
-cd CLMS-Status-CDSE-SH
+cd SH-CLMS-Status
 
 # Create a virtual environment
 python3.12 -m venv venv
@@ -29,6 +29,12 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 # Install the package and dependencies
 pip install -e .
+```
+
+**Using `uv`** (optional, if preferred):
+```bash
+cd SH-CLMS-Status
+uv sync
 ```
 
 ### Authentication

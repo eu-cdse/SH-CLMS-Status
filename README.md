@@ -1,4 +1,4 @@
-# CLMS Collections Status in CDSE
+# CLMS Collections Status in CDSE Sentinel Hub
 
 Extract BYOC collection IDs from EU-CDSE documentation and verify their availability in Sentinel Hub. Generates report in CSV format.
 
@@ -12,14 +12,14 @@ Extract BYOC collection IDs from EU-CDSE documentation and verify their availabi
 
 ### Prerequisites
 - **Python** >= 3.12
-- **requests** >= 2.31.0
 - CDSE SH Auth credentials
 
 ### Installation
 
+**Using pip:**
 ```bash
 # Clone or navigate to the project directory
-cd CLMS-Status-CDSE-SH
+cd SH-CLMS-Status
 
 # Create a virtual environment
 python3.12 -m venv venv
@@ -29,6 +29,12 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 # Install the package and dependencies
 pip install -e .
+```
+
+**Using `uv`** (optional, if preferred):
+```bash
+cd SH-CLMS-Status
+uv sync
 ```
 
 ### Authentication
@@ -70,7 +76,7 @@ python main.py -l debug
 The tool automatically creates `CLMS_SH_collection_status.csv` with the following columns:
 - **BYOC ID**: Collection identifier with `byoc-` prefix
 - **Name**: Human-readable collection name
-- **Available**: "Yes" if found in CDSE, "No" if not
+- **Available**: "True" if found in CDSE, "False" if not
 - **Last Updated**: ISO timestamp when the file was generated
 
 Example:
@@ -210,7 +216,7 @@ See [GitHub API Authentication](https://docs.github.com/en/rest/authentication/a
 **Problem**: A collection ID from documentation doesn't exist in Sentinel Hub
 
 **Possible reasons**:
-- Collection is not registered in CDSE (may be in original Sentinel Hub)
+- Collection is not registered in CDSE
 - Collection ID is incorrect or deprecated
 - Collection is temporarily unavailable
 

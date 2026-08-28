@@ -216,7 +216,7 @@ See [GitHub API Authentication](https://docs.github.com/en/rest/authentication/a
 **Problem**: A collection ID from documentation doesn't exist in Sentinel Hub
 
 **Possible reasons**:
-- Collection is not registered in CDSE (may be in original Sentinel Hub)
+- Collection is not registered in CDSE
 - Collection ID is incorrect or deprecated
 - Collection is temporarily unavailable
 
